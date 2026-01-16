@@ -1,4 +1,5 @@
 ﻿@inherits LayoutComponentBase
+@implements IDisposable
 @inject LocalizationService L
 @inject IJSRuntime JS
 @inject NavigationManager Navigation
@@ -293,12 +294,29 @@
 </style>
 
 @code {
+    protected override async Task OnInitializedAsync()
+    {
+        // Subscribe to language change events
+        L.OnLanguageChanged += OnLanguageChangedHandler;
+        await base.OnInitializedAsync();
+    }
+
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender)
         {
             await JS.InvokeVoidAsync("initNavbarScroll");
         }
+    }
+
+    private void OnLanguageChangedHandler()
+    {
+        // Trigger re-render when language changes
+        StateHasChanged();
+        
+        // Force navigation to current page to update all content
+        var currentUri = Navigation.Uri;
+        Navigation.NavigateTo(currentUri, forceLoad: false);
     }
 
     private async Task SetLanguageItalian()
@@ -314,5 +332,11 @@
     private async Task SetLanguageGerman()
     {
         await L.SetLanguageAsync("de");
+    }
+
+    public void Dispose()
+    {
+        // Unsubscribe from event to prevent memory leaks
+        L.OnLanguageChanged -= OnLanguageChangedHandler;
     }
 }
