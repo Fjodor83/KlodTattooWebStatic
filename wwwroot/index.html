@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Klod Tattoo Studio - Arte sulla tua pelle</title>
+  <meta name="description"
+    content="Studio professionale di tatuaggi a Obernburg am Main. Arte sulla pelle dal 2015. Specializzati in realistico, traditional e blackwork.">
+  <base href="/" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- AOS Animation Library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+  <!-- GLightbox -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+
+  <!-- App CSS -->
+  <link href="css/app.css" rel="stylesheet" />
+  <link href="KlodTattooWebStatic.styles.css" rel="stylesheet" />
+
+  <!-- Schema.org Markup -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TattooParlor",
+      "name": "Klod Tattoo Studio",
+      "image": "https://yourdomain.com/images/klod_logo.png",
+      "telephone": "+491722487670",
+      "email": "info.klodtattoo@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Lindenstraße 26",
+        "addressLocality": "Obernburg am Main",
+        "postalCode": "63785",
+        "addressCountry": "DE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 49.840,
+        "longitude": 9.085
+      },
+      "url": "https://yourdomain.com",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "11:00",
+        "closes": "16:00"
+      },
+      "priceRange": "$$$"
+    }
+    </script>
+</head>
+
+<body>
+  <div id="app">
+    <div class="loading" style="display: flex; justify-content: center; align-items: center; min-height: 100vh;">
+      <div class="spinner"></div>
+    </div>
+  </div>
+
+  <div id="blazor-error-ui">
+    An unhandled error has occurred.
+    <a href="" class="reload">Reload</a>
+    <a class="dismiss">🗙</a>
+  </div>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- AOS Animation Library JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true,
+      duration: 800,
+      easing: 'ease-out-cubic'
+    });
+  </script>
+
+  <!-- GLightbox JS -->
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
+  <!-- Site JS -->
+  <script src="js/site.js"></script>
+
+  <!-- Blazor -->
+  <script src="_framework/blazor.webassembly.js"></script>
+</body>
+
+</html>

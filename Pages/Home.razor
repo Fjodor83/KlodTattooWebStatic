@@ -1,0 +1,365 @@
+﻿@page "/"
+@inject LocalizationService L
+
+<PageTitle>Klod Tattoo Studio - @L["Hero_Tagline"]</PageTitle>
+
+<!-- HERO SECTION -->
+<div class="hero-section position-relative text-center text-white overflow-hidden">
+    <div class="overlay position-absolute top-0 start-0 w-100 h-100"
+         style="background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 100%);"></div>
+
+    <div class="content position-relative px-3 mx-auto text-center" style="z-index: 1; max-width: 900px;" data-aos="fade-up" data-aos-duration="1000">
+        <h1 class="display-1 fw-bold text-uppercase mb-4" style="letter-spacing: 8px; color: #d4af37; text-shadow: 2px 2px 8px rgba(0,0,0,0.8);">
+            @L["Hero_Tagline"]
+        </h1>
+        <p class="lead mb-5 fs-2" style="letter-spacing: 3px; text-shadow: 1px 1px 4px rgba(0,0,0,0.8);"></p>
+        <a href="/contacts"
+           class="btn btn-gold btn-lg px-5 py-3 rounded-pill shadow-lg"
+           data-aos="fade-up" data-aos-delay="200">
+            <i class="fas fa-calendar-check me-2"></i> @L["Hero_BookButton"]
+        </a>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="position-absolute bottom-0 start-50 translate-middle-x mb-4" style="z-index: 2;">
+        <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="1000">
+            <i class="fas fa-chevron-down fa-2x text-white animate-bounce"></i>
+        </div>
+    </div>
+</div>
+
+<div class="container py-5">
+    <!-- BIOGRAPHY SECTION -->
+    <div class="row mb-5 align-items-center g-5">
+        <div class="col-lg-6" data-aos="fade-right">
+            <div class="position-relative">
+                <h2 class="text-uppercase mb-4 display-5 fw-bold"
+                    style="border-left: 5px solid #d4af37; padding-left: 20px;">
+                    @L["Bio_Title"]
+                </h2>
+
+                <p class="lead text-muted mb-4 fs-5">
+                    @L["Bio_Welcome"]
+                </p>
+
+                <p class="text-muted mb-3 lh-lg">
+                    @L["Bio_Paragraph1"]
+                </p>
+
+                <div class="highlight-box p-4 mb-4 rounded" style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); border-left: 4px solid #d4af37;">
+                    <p class="text-light mb-0">
+                        <i class="fas fa-graduation-cap text-warning me-2"></i>
+                        @L["Bio_Education"]
+                    </p>
+                </div>
+
+                <p class="text-muted mb-4 lh-lg">
+                    @L["Bio_Paragraph2"]
+                </p>
+
+                <div class="row g-3 mb-4">
+                    <div class="col-6">
+                        <div class="feature-badge text-center p-3 rounded bg-dark">
+                            <i class="fas fa-certificate text-warning fs-3 mb-2"></i>
+                            <p class="small text-light mb-0">@L["Bio_Feature1"]</p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="feature-badge text-center p-3 rounded bg-dark">
+                            <i class="fas fa-shield-alt text-warning fs-3 mb-2"></i>
+                            <p class="small text-light mb-0">@L["Bio_Feature2"]</p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="feature-badge text-center p-3 rounded bg-dark">
+                            <i class="fas fa-tools text-warning fs-3 mb-2"></i>
+                            <p class="small text-light mb-0">@L["Bio_Feature3"]</p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="feature-badge text-center p-3 rounded bg-dark">
+                            <i class="fas fa-infinity text-warning fs-3 mb-2"></i>
+                            <p class="small text-light mb-0">@L["Bio_Feature4"]</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quote-box p-4 rounded shadow-sm" style="background: #f8f9fa; border-left: 5px solid #d4af37;">
+                    <p class="mb-0 text-dark fs-5 fst-italic">
+                        @L["Bio_Quote"]
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6" data-aos="fade-left">
+            <div class="position-relative">
+                <div class="image-wrapper p-3 rounded shadow-lg" style="background: linear-gradient(135deg, #d4af37 0%, #c9a22e 100%);">
+                    <img src="/images/profile.jpg" class="img-fluid rounded shadow" alt="Klod Tattoo Artist" />
+                </div>
+
+                <!-- Stats overlay -->
+                <div class="position-absolute bottom-0 start-0 w-100 p-3" style="z-index: 2;">
+                    <div class="row g-2">
+                        <div class="col-4">
+                            <div class="stat-card text-center p-2 rounded shadow" style="background: rgba(212, 175, 55, 0.95);">
+                                <h4 class="mb-0 fw-bold text-dark">10+</h4>
+                                <small class="text-dark">@L["Stats_Years"]</small>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="stat-card text-center p-2 rounded shadow" style="background: rgba(212, 175, 55, 0.95);">
+                                <h4 class="mb-0 fw-bold text-dark">1000+</h4>
+                                <small class="text-dark">@L["Stats_Tattoos"]</small>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="stat-card text-center p-2 rounded shadow" style="background: rgba(212, 175, 55, 0.95);">
+                                <h4 class="mb-0 fw-bold text-dark">5⭐</h4>
+                                <small class="text-dark">@L["Stats_Rating"]</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- DIVIDER -->
+    <div class="row my-5">
+        <div class="col-12">
+            <hr class="golden-divider mx-auto" style="width: 100px; height: 3px; background: linear-gradient(90deg, transparent, #d4af37, transparent); border: none;">
+        </div>
+    </div>
+
+    <!-- STYLES SECTION -->
+    <div class="row text-center mb-5">
+        <div class="col-12 mb-5" data-aos="fade-up">
+            <h2 class="display-5 fw-bold text-uppercase mb-3" style="color: #d4af37;">@L["Styles_Title"]</h2>
+            <p class="text-muted lead">@L["Styles_Subtitle"]</p>
+            <div class="golden-underline mx-auto" style="width: 80px; height: 4px; background-color: #d4af37;"></div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="style-card h-100 p-4 rounded shadow-lg position-relative overflow-hidden"
+                 style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); border: 2px solid #d4af37; transition: all 0.3s ease;">
+                <div class="style-icon mb-3">
+                    <i class="fas fa-eye fa-3x" style="color: #d4af37;"></i>
+                </div>
+                <h3 class="h4 mb-3" style="color: #d4af37;">@L["Style_Realistic_Title"]</h3>
+                <p class="text-muted mb-3">@L["Style_Realistic_Description"]</p>
+                <ul class="list-unstyled text-muted small">
+                    <li><i class="fas fa-check text-gold me-2"></i>@L["Style_Realistic_Feature1"]</li>
+                    <li><i class="fas fa-check text-gold me-2"></i>@L["Style_Realistic_Feature2"]</li>
+                    <li><i class="fas fa-check text-gold me-2"></i>@L["Style_Realistic_Feature3"]</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="style-card h-100 p-4 rounded shadow-lg position-relative overflow-hidden"
+                 style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); border: 2px solid #d4af37; transition: all 0.3s ease;">
+                <div class="style-icon mb-3">
+                    <i class="fas fa-anchor fa-3x" style="color: #d4af37;"></i>
+                </div>
+                <h3 class="h4 mb-3" style="color: #d4af37;">@L["Style_Traditional_Title"]</h3>
+                <p class="text-muted mb-3">@L["Style_Traditional_Description"]</p>
+                <ul class="list-unstyled text-muted small">
+                    <li><i class="fas fa-check text-gold me-2"></i>@L["Style_Traditional_Feature1"]</li>
+                    <li><i class="fas fa-check text-gold me-2"></i>@L["Style_Traditional_Feature2"]</li>
+                    <li><i class="fas fa-check text-gold me-2"></i>@L["Style_Traditional_Feature3"]</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="style-card h-100 p-4 rounded shadow-lg position-relative overflow-hidden"
+                 style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); border: 2px solid #d4af37; transition: all 0.3s ease;">
+                <div class="style-icon mb-3">
+                    <i class="fas fa-moon fa-3x" style="color: #d4af37;"></i>
+                </div>
+                <h3 class="h4 mb-3" style="color: #d4af37;">@L["Style_Blackwork_Title"]</h3>
+                <p class="text-muted mb-3">@L["Style_Blackwork_Description"]</p>
+                <ul class="list-unstyled text-muted small">
+                    <li><i class="fas fa-check text-gold me-2"></i>@L["Style_Blackwork_Feature1"]</li>
+                    <li><i class="fas fa-check text-gold me-2"></i>@L["Style_Blackwork_Feature2"]</li>
+                    <li><i class="fas fa-check text-gold me-2"></i>@L["Style_Blackwork_Feature3"]</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- DIVIDER -->
+    <div class="row my-5">
+        <div class="col-12">
+            <hr class="golden-divider mx-auto" style="width: 100px; height: 3px; background: linear-gradient(90deg, transparent, #d4af37, transparent); border: none;">
+        </div>
+    </div>
+
+    <!-- REVIEWS SECTION -->
+    <div class="row mb-5">
+        <div class="col-12 text-center mb-5" data-aos="fade-up">
+            <h2 class="display-5 fw-bold text-uppercase mb-3">@L["Reviews_Title"]</h2>
+            <p class="text-muted lead">@L["Reviews_Subtitle"]</p>
+            <div class="golden-underline mx-auto" style="width: 80px; height: 4px; background-color: #d4af37;"></div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="review-card h-100 p-4 rounded shadow-lg position-relative"
+                 style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); border-top: 4px solid #d4af37;">
+                <div class="mb-3">
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                </div>
+                <p class="text-light fst-italic mb-4 lh-lg">
+                    @L["Review1_Text"]
+                </p>
+                <div class="d-flex align-items-center">
+                    <div class="avatar rounded-circle bg-warning d-flex align-items-center justify-content-center me-3"
+                         style="width: 50px; height: 50px;">
+                        <span class="fw-bold text-dark">MR</span>
+                    </div>
+                    <div>
+                        <p class="mb-0 fw-bold text-light">@L["Review1_Name"]</p>
+                        <small class="text-muted">@L["Review_VerifiedCustomer"]</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="200">
+            <div class="review-card h-100 p-4 rounded shadow-lg position-relative"
+                 style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); border-top: 4px solid #d4af37;">
+                <div class="mb-3">
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                </div>
+                <p class="text-light fst-italic mb-4 lh-lg">
+                    @L["Review2_Text"]
+                </p>
+                <div class="d-flex align-items-center">
+                    <div class="avatar rounded-circle bg-warning d-flex align-items-center justify-content-center me-3"
+                         style="width: 50px; height: 50px;">
+                        <span class="fw-bold text-dark">GB</span>
+                    </div>
+                    <div>
+                        <p class="mb-0 fw-bold text-light">@L["Review2_Name"]</p>
+                        <small class="text-muted">@L["Review_VerifiedCustomer"]</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="300">
+            <div class="review-card h-100 p-4 rounded shadow-lg position-relative"
+                 style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); border-top: 4px solid #d4af37;">
+                <div class="mb-3">
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                </div>
+                <p class="text-light fst-italic mb-4 lh-lg">
+                    @L["Review3_Text"]
+                </p>
+                <div class="d-flex align-items-center">
+                    <div class="avatar rounded-circle bg-warning d-flex align-items-center justify-content-center me-3"
+                         style="width: 50px; height: 50px;">
+                        <span class="fw-bold text-dark">LS</span>
+                    </div>
+                    <div>
+                        <p class="mb-0 fw-bold text-light">@L["Review3_Name"]</p>
+                        <small class="text-muted">@L["Review_VerifiedCustomer"]</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA SECTION -->
+    <div class="row my-5">
+        <div class="col-12" data-aos="fade-up">
+            <div class="cta-box text-center p-5 rounded shadow-lg position-relative overflow-hidden"
+                 style="background: linear-gradient(135deg, #d4af37 0%, #c9a22e 100%);">
+                <h3 class="display-6 fw-bold text-dark mb-3">@L["CTA_Title"]</h3>
+                <p class="lead text-dark mb-4">@L["CTA_Subtitle"]</p>
+                <a href="/contacts" class="btn btn-dark btn-lg px-5 py-3 rounded-pill shadow">
+                    <i class="fas fa-calendar-check me-2"></i> @L["CTA_Button"]
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CUSTOM STYLES for Home Page -->
+<style>
+    /* Button Gold */
+    .btn-gold {
+        background: linear-gradient(135deg, #d4af37 0%, #c9a22e 100%);
+        border: none;
+        color: #000;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+    }
+
+    .btn-gold:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
+        color: #000;
+    }
+
+    /* Scroll Indicator Animation */
+    @@keyframes bounce {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(10px);
+        }
+    }
+
+    .animate-bounce {
+        animation: bounce 2s infinite;
+    }
+
+    /* Style Cards Hover */
+    .style-card:hover {
+        transform: translateY(-10px);
+        border-color: #ffd700 !important;
+        box-shadow: 0 15px 40px rgba(212, 175, 55, 0.3) !important;
+    }
+
+    /* Review Cards Hover */
+    .review-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(212, 175, 55, 0.2) !important;
+    }
+
+    /* Image Wrapper Hover */
+    .image-wrapper:hover {
+        transform: scale(1.02);
+        transition: transform 0.3s ease;
+    }
+
+    /* Responsive adjustments */
+    @@media (max-width: 768px) {
+        .display-1 {
+            font-size: 3rem !important;
+        }
+        .hero-section {
+            height: 70vh !important;
+        }
+    }
+</style>
+
+@code {
+}

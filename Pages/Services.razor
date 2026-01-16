@@ -1,0 +1,444 @@
+@page "/services"
+@inject LocalizationService L
+
+<PageTitle>Servizi e Prezzi - Klod Tattoo Studio</PageTitle>
+
+<div class="container py-5">
+    <!-- Header Section -->
+    <div class="text-center mb-5" data-aos="fade-down">
+        <h1 class="display-3 fw-bold text-uppercase mb-3" style="color: #d4af37; letter-spacing: 3px;">
+            I Nostri Servizi
+        </h1>
+        <p class="lead text-muted fs-4">Offriamo servizi professionali con grande attenzione ai dettagli</p>
+        <div class="golden-underline mx-auto mt-3" style="width: 100px; height: 4px; background: linear-gradient(90deg, transparent, #d4af37, transparent);"></div>
+    </div>
+
+    <!-- Pricing Cards -->
+    <div class="row g-4 mb-5">
+        <!-- Small Tattoos -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="pricing-card card h-100 shadow-lg border-0 text-center position-relative overflow-hidden" 
+                 style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); border: 2px solid rgba(212, 175, 55, 0.3) !important;">
+                <div class="card-header border-0 py-4" style="background: rgba(212, 175, 55, 0.1);">
+                    <div class="icon-wrapper mx-auto mb-3" style="width: 80px; height: 80px;">
+                        <div class="rounded-circle d-flex align-items-center justify-content-center h-100" 
+                             style="background: linear-gradient(135deg, #d4af37 0%, #c9a22e 100%);">
+                            <i class="fas fa-bolt fa-2x text-dark"></i>
+                        </div>
+                    </div>
+                    <h3 class="h4 text-light mb-2">Tatuaggi Small</h3>
+                    <p class="text-muted small mb-0">Piccoli e veloci</p>
+                </div>
+                <div class="card-body p-4">
+                    <div class="price-tag mb-4">
+                        <h4 class="display-4 fw-bold mb-0" style="color: #d4af37;">€80</h4>
+                        <p class="text-muted small">Prezzo di partenza</p>
+                    </div>
+                    <ul class="list-unstyled text-start mb-4">
+                        <li class="mb-3 d-flex align-items-start">
+                            <i class="fas fa-check-circle text-success me-3 mt-1"></i>
+                            <span class="text-light">Fino a 7cm</span>
+                        </li>
+                        <li class="mb-3 d-flex align-items-start">
+                            <i class="fas fa-check-circle text-success me-3 mt-1"></i>
+                            <span class="text-light">Design semplice</span>
+                        </li>
+                        <li class="d-flex align-items-start">
+                            <i class="fas fa-check-circle text-success me-3 mt-1"></i>
+                            <span class="text-light">Inchiostri certificati</span>
+                        </li>
+                    </ul>
+                    <a href="/booking" class="btn btn-outline-gold w-100 py-3 rounded-pill">
+                        <i class="fas fa-calendar-check me-2"></i>Prenota Ora
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Medium Pieces -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="pricing-card card h-100 shadow-lg border-0 text-center position-relative overflow-hidden" 
+                 style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); border: 3px solid #d4af37 !important;">
+                <!-- Popular Badge -->
+                <div class="position-absolute top-0 end-0 m-3" style="z-index: 10;">
+                    <span class="badge rounded-pill py-2 px-3" style="background: linear-gradient(135deg, #d4af37 0%, #c9a22e 100%);">
+                        <i class="fas fa-star me-1"></i>Più Richiesto
+                    </span>
+                </div>
+                <div class="card-header border-0 py-4" style="background: rgba(212, 175, 55, 0.2);">
+                    <div class="icon-wrapper mx-auto mb-3" style="width: 80px; height: 80px;">
+                        <div class="rounded-circle d-flex align-items-center justify-content-center h-100"
+                             style="background: linear-gradient(135deg, #d4af37 0%, #c9a22e 100%);">
+                            <i class="fas fa-hand-holding-heart fa-2x text-dark"></i>
+                        </div>
+                    </div>
+                    <h3 class="h4 text-light mb-2">Tatuaggi Medium</h3>
+                    <p class="text-muted small mb-0">Dimensioni medie</p>
+                </div>
+                <div class="card-body p-4">
+                    <div class="price-tag mb-4">
+                        <h4 class="display-4 fw-bold mb-0" style="color: #d4af37;">€150</h4>
+                        <p class="text-muted small">Prezzo indicativo</p>
+                    </div>
+                    <ul class="list-unstyled text-start mb-4">
+                        <li class="mb-3 d-flex align-items-start">
+                            <i class="fas fa-check-circle text-success me-3 mt-1"></i>
+                            <span class="text-light">Dimensioni medie (7-15cm)</span>
+                        </li>
+                        <li class="mb-3 d-flex align-items-start">
+                            <i class="fas fa-check-circle text-success me-3 mt-1"></i>
+                            <span class="text-light">Design dettagliato</span>
+                        </li>
+                        <li class="d-flex align-items-start">
+                            <i class="fas fa-check-circle text-success me-3 mt-1"></i>
+                            <span class="text-light">Consulenza inclusa</span>
+                        </li>
+                    </ul>
+                    <a href="/booking" class="btn btn-gold w-100 py-3 rounded-pill shadow-lg">
+                        <i class="fas fa-calendar-check me-2"></i>Prenota Ora
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Full Sessions -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="pricing-card card h-100 shadow-lg border-0 text-center position-relative overflow-hidden" 
+                 style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); border: 2px solid rgba(212, 175, 55, 0.3) !important;">
+                <div class="card-header border-0 py-4" style="background: rgba(212, 175, 55, 0.1);">
+                    <div class="icon-wrapper mx-auto mb-3" style="width: 80px; height: 80px;">
+                        <div class="rounded-circle d-flex align-items-center justify-content-center h-100" 
+                             style="background: linear-gradient(135deg, #d4af37 0%, #c9a22e 100%);">
+                            <i class="fas fa-dragon fa-2x text-dark"></i>
+                        </div>
+                    </div>
+                    <h3 class="h4 text-light mb-2">Sessioni Complete</h3>
+                    <p class="text-muted small mb-0">Grandi progetti</p>
+                </div>
+                <div class="card-body p-4">
+                    <div class="price-tag mb-4">
+                        <h4 class="display-4 fw-bold mb-0" style="color: #d4af37;">€300+</h4>
+                        <p class="text-muted small">Tariffa oraria</p>
+                    </div>
+                    <ul class="list-unstyled text-start mb-4">
+                        <li class="mb-3 d-flex align-items-start">
+                            <i class="fas fa-check-circle text-success me-3 mt-1"></i>
+                            <span class="text-light">Tatuaggi grandi (15cm+)</span>
+                        </li>
+                        <li class="mb-3 d-flex align-items-start">
+                            <i class="fas fa-check-circle text-success me-3 mt-1"></i>
+                            <span class="text-light">Design custom complessi</span>
+                        </li>
+                        <li class="mb-3 d-flex align-items-start">
+                            <i class="fas fa-check-circle text-success me-3 mt-1"></i>
+                            <span class="text-light">Sessioni multiple</span>
+                        </li>
+                        <li class="d-flex align-items-start">
+                            <i class="fas fa-check-circle text-success me-3 mt-1"></i>
+                            <span class="text-light">Bozza gratuita</span>
+                        </li>
+                    </ul>
+                    <a href="/booking" class="btn btn-outline-gold w-100 py-3 rounded-pill">
+                        <i class="fas fa-calendar-check me-2"></i>Prenota Ora
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="row my-5">
+        <div class="col-12">
+            <hr class="golden-divider mx-auto" style="width: 150px; height: 3px; background: linear-gradient(90deg, transparent, #d4af37, transparent); border: none;">
+        </div>
+    </div>
+
+    <!-- Process & Deposit Section -->
+    <div class="row g-4 mb-5">
+        <!-- How It Works -->
+        <div class="col-lg-7" data-aos="fade-right">
+            <div class="card shadow-lg border-0 h-100" style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);">
+                <div class="card-header border-0 py-4" style="background: linear-gradient(135deg, #d4af37 0%, #c9a22e 100%);">
+                    <h2 class="h4 mb-0 text-uppercase fw-bold text-dark text-center">
+                        <i class="fas fa-list-ol me-2"></i>Come Funziona
+                    </h2>
+                </div>
+                <div class="card-body p-4">
+                    <!-- Step 1 -->
+                    <div class="process-step d-flex mb-4 p-3 rounded" style="background: rgba(212, 175, 55, 0.05); border-left: 4px solid #d4af37;">
+                        <div class="step-number me-4">
+                            <div class="rounded-circle bg-warning d-flex align-items-center justify-content-center" 
+                                 style="width: 50px; height: 50px; min-width: 50px;">
+                                <span class="fw-bold fs-4 text-dark">1</span>
+                            </div>
+                        </div>
+                        <div class="step-content">
+                            <h5 class="text-light mb-2">
+                                <i class="fas fa-comments text-warning me-2"></i>Consulta zione
+                            </h5>
+                            <p class="text-muted mb-0">
+                                Discutiamo la tua idea e il design del tatuaggio. Possiamo farlo di persona o online.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="process-step d-flex mb-4 p-3 rounded" style="background: rgba(212, 175, 55, 0.05); border-left: 4px solid #d4af37;">
+                        <div class="step-number me-4">
+                            <div class="rounded-circle bg-warning d-flex align-items-center justify-content-center" 
+                                 style="width: 50px; height: 50px; min-width: 50px;">
+                                <span class="fw-bold fs-4 text-dark">2</span>
+                            </div>
+                        </div>
+                        <div class="step-content">
+                            <h5 class="text-light mb-2">
+                                <i class="fas fa-pencil-ruler text-warning me-2"></i>Design e Preventivo
+                            </h5>
+                            <p class="text-muted mb-0">
+                                Creo il design custom per te e ti fornisco un preventivo accurato.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="process-step d-flex mb-4 p-3 rounded" style="background: rgba(212, 175, 55, 0.05); border-left: 4px solid #d4af37;">
+                        <div class="step-number me-4">
+                            <div class="rounded-circle bg-warning d-flex align-items-center justify-content-center"
+                                 style="width: 50px; height: 50px; min-width: 50px;">
+                                <span class="fw-bold fs-4 text-dark">3</span>
+                            </div>
+                        </div>
+                        <div class="step-content">
+                            <h5 class="text-light mb-2">
+                                <i class="fas fa-calendar-check text-warning me-2"></i>Prenotazione
+                            </h5>
+                            <p class="text-muted mb-0">
+                                Prenotazione l'appuntamento e versiamo l'acconto per confermare la data.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="process-step d-flex p-3 rounded" style="background: rgba(212, 175, 55, 0.05); border-left: 4px solid #d4af37;">
+                        <div class="step-number me-4">
+                            <div class="rounded-circle bg-warning d-flex align-items-center justify-content-center"
+                                 style="width: 50px; height: 50px; min-width: 50px;">
+                                <span class="fw-bold fs-4 text-dark">4</span>
+                            </div>
+                        </div>
+                        <div class="step-content">
+                            <h5 class="text-light mb-2">
+                                <i class="fas fa-paint-brush text-warning me-2"></i>Sessione Tattoo
+                            </h5>
+                            <p class="text-muted mb-0">
+                                Il giorno dell'appuntamento realizziamo il tuo tatuaggio con massima professionalità.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 text-center">
+                        <a href="/booking" class="btn btn-gold btn-lg px-5 py-3 rounded-pill shadow-lg">
+                            <i class="fas fa-calendar-plus me-2"></i>Inizia Ora
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Deposit Policy & Extra Info -->
+        <div class="col-lg-5" data-aos="fade-left">
+            <div class="d-flex flex-column h-100 gap-4">
+                <!-- Deposit Policy -->
+                <div class="card shadow-lg border-0" style="background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%); border: 2px solid #d4af37 !important;">
+                    <div class="card-body p-4">
+                        <h3 class="h5 mb-4 text-warning text-center">
+                            <i class="fas fa-euro-sign me-2"></i>Politica Acconto
+                        </h3>
+                        <div class="deposit-info">
+                            <div class="mb-3 p-3 rounded" style="background: rgba(212, 175, 55, 0.1);">
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="fas fa-money-bill-wave text-warning me-3 fs-4"></i>
+                                    <div>
+                                        <strong class="text-light d-block">Acconto Richiesto</strong>
+                                        <span class="text-muted small">€50 - €100</span>
+                                    </div>
+                                </div>
+                                <p class="text-muted small mb-0 ps-5">
+                                    L'importo varia in base alle dimensioni del tatuaggio
+                                </p>
+                            </div>
+
+                            <div class="mb-3 p-3 rounded" style="background: rgba(40, 167, 69, 0.1);">
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="fas fa-calendar-alt text-success me-3 fs-4"></i>
+                                    <div>
+                                        <strong class="text-light d-block">Riprogrammazione</strong>
+                                        <span class="text-muted small">Contattami 48h prima</span>
+                                    </div>
+                                </div>
+                                <p class="text-muted small mb-0 ps-5">
+                                    L'acconto verrà mantenuto per una nuova data
+                                </p>
+                            </div>
+
+                            <div class="p-3 rounded" style="background: rgba(220, 53, 69, 0.1);">
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="fas fa-exclamation-triangle text-danger me-3 fs-4"></i>
+                                    <div>
+                                        <strong class="text-light d-block">Mancata Presentazione</strong>
+                                        <span class="text-muted small">Acconto non rimborsabile</span>
+                                    </div>
+                                </div>
+                                <p class="text-muted small mb-0 ps-5">
+                                    In caso di no-show senza preavviso
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Payment Methods -->
+                <div class="card shadow-lg border-0" style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);">
+                    <div class="card-body p-4">
+                        <h3 class="h6 mb-4 text-warning text-center">
+                            <i class="fas fa-credit-card me-2"></i>Metodi di Pagamento
+                        </h3>
+                        <div class="payment-methods text-center">
+                            <div class="row g-2">
+                                <div class="col-6">
+                                    <div class="payment-badge p-2 rounded" style="background: rgba(212, 175, 55, 0.1);">
+                                        <i class="fas fa-money-bill-wave text-warning fs-3 mb-2"></i>
+                                        <p class="small text-light mb-0">Contanti</p>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="payment-badge p-2 rounded" style="background: rgba(212, 175, 55, 0.1);">
+                                        <i class="fas fa-credit-card text-warning fs-3 mb-2"></i>
+                                        <p class="small text-light mb-0">Carta</p>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="payment-badge p-2 rounded" style="background: rgba(212, 175, 55, 0.1);">
+                                        <i class="fas fa-university text-warning fs-3 mb-2"></i>
+                                        <p class="small text-light mb-0">Bonifico</p>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="payment-badge p-2 rounded" style="background: rgba(212, 175, 55, 0.1);">
+                                        <i class="fab fa-paypal text-warning fs-3 mb-2"></i>
+                                        <p class="small text-light mb-0">PayPal</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Guarantee -->
+                <div class="card shadow-lg border-0" style="background: linear-gradient(135deg, #28a745 0%, #20923b 100%);">
+                    <div class="card-body p-4 text-center">
+                        <i class="fas fa-shield-alt fa-3x text-white mb-3"></i>
+                        <h4 class="h6 text-white fw-bold mb-2">100% Garanzia di Qualità</h4>
+                        <p class="small text-white mb-0">
+                            Utilizziamo solo materiali certificati e garantiamo la massima igiene e professionalità
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Quick -->
+    <div class="row mt-5">
+        <div class="col-12" data-aos="fade-up">
+            <div class="card shadow-lg border-0" style="background: linear-gradient(135deg, #d4af37 0%, #c9a22e 100%);">
+                <div class="card-body p-5 text-center">
+                    <h3 class="display-6 fw-bold text-dark mb-3">
+                        <i class="fas fa-question-circle me-2"></i>Hai ancora domande?
+                    </h3>
+                    <p class="lead text-dark mb-4">
+                        Consulta la nostra sezione FAQ o contattaci direttamente per qualsiasi informazione
+                    </p>
+                    <div class="d-flex justify-content-center gap-3 flex-wrap">
+                        <a href="/contacts" class="btn btn-dark btn-lg px-5 py-3 rounded-pill shadow">
+                            <i class="fas fa-envelope me-2"></i>Contattaci
+                        </a>
+                        <a href="/info" class="btn btn-outline-dark btn-lg px-5 py-3 rounded-pill shadow">
+                            <i class="fas fa-info-circle me-2"></i>Vai alle FAQ
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .btn-gold {
+        background: linear-gradient(135deg, #d4af37 0%, #c9a22e 100%);
+        border: none;
+        color: #000;
+        font-weight: 600;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+    }
+
+    .btn-gold:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
+        color: #000;
+    }
+
+    .btn-outline-gold {
+        background: transparent;
+        border: 2px solid #d4af37;
+        color: #d4af37;
+        font-weight: 600;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+    }
+
+    .btn-outline-gold:hover {
+        background: linear-gradient(135deg, #d4af37 0%, #c9a22e 100%);
+        border-color: #d4af37;
+        color: #000;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
+    }
+
+    .pricing-card {
+        transition: all 0.3s ease;
+    }
+
+    .pricing-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(212, 175, 55, 0.3) !important;
+    }
+
+    .process-step {
+        transition: all 0.3s ease;
+    }
+
+    .process-step:hover {
+        background: rgba(212, 175, 55, 0.15) !important;
+        transform: translateX(10px);
+    }
+
+    .payment-badge {
+        transition: all 0.3s ease;
+    }
+
+    .payment-badge:hover {
+        background: rgba(212, 175, 55, 0.2) !important;
+        transform: scale(1.05);
+    }
+
+    @@media (max-width: 768px) {
+        .display-3 {
+            font-size: 2.5rem !important;
+        }
+    }
+</style>
+
+@code {
+}

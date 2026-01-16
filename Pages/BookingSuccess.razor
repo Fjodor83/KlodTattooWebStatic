@@ -1,0 +1,73 @@
+@page "/booking/success"
+@inject LocalizationService L
+
+<PageTitle>Richiesta Inviata - Klod Tattoo Studio</PageTitle>
+
+<div class="container mt-5 text-center" style="min-height: 60vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+    <div data-aos="zoom-in">
+        <i class="fas fa-check-circle fa-5x mb-4" style="color: #d4af37;"></i>
+        <h1 class="display-4 text-uppercase mb-3 fw-bold" style="color: #d4af37;">Richiesta Inviata!</h1>
+        <p class="lead text-muted mb-5">Ti risponderò al più presto. Controlla la tua email nelle prossime 24-48 ore.</p>
+        
+        <div class="mb-5">
+            <p class="text-light mb-3">Nel frattempo, puoi:</p>
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                <a href="https://instagram.com/klod_tattoo" target="_blank" class="btn btn-outline-light">
+                    <i class="fab fa-instagram me-2"></i>Seguimi su Instagram
+                </a>
+                <a href="/portfolio" class="btn btn-outline-light">
+                    <i class="fas fa-images me-2"></i>Guarda il Portfolio
+                </a>
+            </div>
+        </div>
+
+        <a href="/" class="btn btn-gold btn-lg px-5 py-3">
+            <i class="fas fa-home me-2"></i>Torna alla Home
+        </a>
+    </div>
+</div>
+
+<style>
+    .btn-gold {
+        background: linear-gradient(135deg, #d4af37 0%, #c9a22e 100%);
+        border: none;
+        color: #000;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+    }
+
+    .btn-gold:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
+        color: #000;
+    }
+
+    .btn-outline-light:hover {
+        background-color: rgba(212, 175, 55, 0.2);
+        border-color: #d4af37;
+        transform: translateY(-2px);
+    }
+
+    @@keyframes checkmark {
+        0% {
+            transform: scale(0) rotate(-45deg);
+            opacity: 0;
+        }
+        50% {
+            transform: scale(1.2) rotate(0deg);
+        }
+        100% {
+            transform: scale(1) rotate(0deg);
+            opacity: 1;
+        }
+    }
+
+    .fa-check-circle {
+        animation: checkmark 0.6s ease-out;
+    }
+</style>
+
+@code {
+}

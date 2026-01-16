@@ -1,0 +1,318 @@
+﻿@inherits LayoutComponentBase
+@inject LocalizationService L
+@inject IJSRuntime JS
+@inject NavigationManager Navigation
+
+<!-- Navbar -->
+<header class="fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom" id="mainNavbar">
+        <div class="container-fluid px-3 px-lg-4">
+            <!-- Logo/Brand -->
+            <a class="navbar-brand d-flex align-items-center" href="/">
+                <img src="/images/klod_logo.png" alt="Klod Tattoo Logo" style="height: 45px; width: auto; filter: brightness(0) saturate(100%) invert(72%) sepia(56%) saturate(463%) hue-rotate(357deg) brightness(95%) contrast(87%);" />
+            </a>
+
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Nav Items -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Main Navigation -->
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                    <li class="nav-item">
+                        <a class="nav-link px-2" href="/">
+                            <i class="fas fa-home me-1"></i>Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-2" href="/portfolio">
+                            <i class="fas fa-images me-1"></i>Portfolio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-2" href="/services">
+                            <i class="fas fa-palette me-1"></i>Servizi
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-2" href="/info">
+                            <i class="fas fa-info-circle me-1"></i>Info
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-2" href="/contacts">
+                            <i class="fas fa-envelope me-1"></i>Contatti
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Desktop Divider -->
+                <div class="d-none d-lg-block mx-3" style="border-right: 1px solid rgba(255,255,255,0.2); height: 24px;"></div>
+
+                <!-- Booking Button -->
+                <a class="btn btn-gold px-4 py-2 rounded-pill shadow-sm d-none d-lg-inline-block" href="/booking">
+                    <i class="fas fa-calendar-check me-2"></i>Prenota
+                </a>
+
+                <!-- Language Switcher -->
+                <div class="dropdown d-none d-lg-block ms-2">
+                    <button class="btn btn-link nav-link dropdown-toggle text-uppercase p-0" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="color: #d4af37 !important; font-weight: bold; text-decoration: none;">
+                        <img src="/images/flags/@(L.CurrentCulture.ToLower()).svg" alt="Flag" style="width: 24px; border: 1px solid rgba(255,255,255,0.1); border-radius: 2px;" class="me-1" />
+                        @L.CurrentCulture.ToUpper()
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end bg-dark border-secondary" aria-labelledby="languageDropdown">
+                        <li>
+                            <button class="dropdown-item text-light hover-gold d-flex align-items-center" @onclick="SetLanguageItalian">
+                                <img src="/images/flags/it.svg" alt="Italiano" style="width: 24px;" class="me-2" />
+                                Italiano
+                            </button>
+                        </li>
+                        <li>
+                            <button class="dropdown-item text-light hover-gold d-flex align-items-center" @onclick="SetLanguageEnglish">
+                                <img src="/images/flags/en.svg" alt="English" style="width: 24px;" class="me-2" />
+                                English
+                            </button>
+                        </li>
+                        <li>
+                            <button class="dropdown-item text-light hover-gold d-flex align-items-center" @onclick="SetLanguageGerman">
+                                <img src="/images/flags/de.svg" alt="Deutsch" style="width: 24px;" class="me-2" />
+                                Deutsch
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- Main Content -->
+<main style="padding-top: 80px; min-height: calc(100vh - 80px);">
+    @Body
+</main>
+
+<!-- Back to Top Button -->
+<button id="backToTop" style="position: fixed; bottom: 30px; right: 30px; width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(135deg, #d4af37 0%, #c9a22e 100%); border: none; color: #000; font-size: 1.2rem; cursor: pointer; z-index: 999; box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4); transition: all 0.3s ease; display: none; align-items: center; justify-content: center;">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- Footer -->
+<footer style="background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%); border-top: 2px solid #d4af37; padding: 3rem 0 1.5rem; width: 100%;">
+    <div class="container">
+        <!-- Top Section -->
+        <div class="row g-4 mb-4">
+            <!-- About Column -->
+            <div class="col-lg-4 col-md-6">
+                <img src="/images/klod_logo.png" alt="Klod Tattoo Logo" style="height: 45px; width: auto; filter: brightness(0) saturate(100%) invert(72%) sepia(56%) saturate(463%) hue-rotate(357deg) brightness(95%) contrast(87%); margin-bottom: 1rem;" />
+                <p class="text-muted small">
+                    Trasformo idee in arte sulla pelle dal 2015. Ogni tatuaggio è un'opera unica creata con passione e professionalità.
+                </p>
+                <div class="mt-3">
+                    <a href="https://instagram.com/klod_tattoo" target="_blank" class="social-icon me-2" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://facebook.com/klod.backa" target="_blank" class="social-icon me-2" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://wa.me/491722487670" target="_blank" class="social-icon me-2" title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="tel:+491722487670" class="social-icon" title="Telefono">
+                        <i class="fas fa-phone"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links Column -->
+            <div class="col-lg-2 col-md-6">
+                <h6 class="text-uppercase fw-bold mb-3 text-light">Link Rapidi</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2">
+                        <a href="/" class="text-muted text-decoration-none hover-gold">
+                            <i class="fas fa-chevron-right me-2" style="color: #d4af37; font-size: 0.7rem;"></i>
+                            Home
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="/portfolio" class="text-muted text-decoration-none hover-gold">
+                            <i class="fas fa-chevron-right me-2" style="color: #d4af37; font-size: 0.7rem;"></i>
+                            Portfolio
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="/services" class="text-muted text-decoration-none hover-gold">
+                            <i class="fas fa-chevron-right me-2" style="color: #d4af37; font-size: 0.7rem;"></i>
+                            Servizi
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="/info" class="text-muted text-decoration-none hover-gold">
+                            <i class="fas fa-chevron-right me-2" style="color: #d4af37; font-size: 0.7rem;"></i>
+                            Info & FAQ
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Services Column -->
+            <div class="col-lg-3 col-md-6">
+                <h6 class="text-uppercase fw-bold mb-3 text-light">Servizi</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2">
+                        <i class="fas fa-check text-gold me-2"></i>
+                        <span class="text-muted">Tatuaggi Custom</span>
+                    </li>
+                    <li class="mb-2">
+                        <i class="fas fa-check text-gold me-2"></i>
+                        <span class="text-muted">Cover-Up</span>
+                    </li>
+                    <li class="mb-2">
+                        <i class="fas fa-check text-gold me-2"></i>
+                        <span class="text-muted">Restauro Tatuaggi</span>
+                    </li>
+                    <li class="mb-2">
+                        <i class="fas fa-check text-gold me-2"></i>
+                        <span class="text-muted">Consulenze</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Contact Column -->
+            <div class="col-lg-3 col-md-6">
+                <h6 class="text-uppercase fw-bold mb-3 text-light">Contatti</h6>
+                <ul class="list-unstyled text-muted small">
+                    <li class="mb-2">
+                        <i class="fas fa-map-marker-alt text-gold me-2"></i>
+                        Lindenstraße 26, 63785 Obernburg am Main
+                    </li>
+                    <li class="mb-2">
+                        <i class="fas fa-phone text-gold me-2"></i>
+                        <a href="tel:+491722487670" class="text-muted text-decoration-none hover-gold">+49 172 2487670</a>
+                    </li>
+                    <li class="mb-2">
+                        <i class="fas fa-envelope text-gold me-2"></i>
+                        <a href="mailto:info.klodtattoo@gmail.com" class="text-muted text-decoration-none hover-gold">info.klodtattoo@gmail.com</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-clock text-gold me-2"></i>
+                        Lun-Ven: 10:00 - 18:00
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Bottom Section -->
+        <hr class="border-secondary">
+        <div class="row align-items-center">
+            <div class="col-md-6 text-center text-md-start">
+                <p class="text-muted small mb-md-0">
+                    © @DateTime.Now.Year Klod Tattoo Studio. Tutti i diritti riservati.
+                </p>
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+                <a href="/privacy" class="text-muted small text-decoration-none hover-gold me-3">Privacy Policy</a>
+                <a href="/cookie-policy" class="text-muted small text-decoration-none hover-gold">Cookie Policy</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<style>
+    /* Navbar Styles */
+    .navbar-custom {
+        background: transparent;
+        transition: all 0.3s ease;
+        padding: 0.75rem 0;
+    }
+
+    .navbar-scrolled {
+        background: rgba(26, 26, 26, 0.95) !important;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 2px 15px rgba(212, 175, 55, 0.1) !important;
+    }
+
+    .nav-link {
+        color: rgba(255, 255, 255, 0.85) !important;
+        transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+        color: #d4af37 !important;
+    }
+
+    .btn-gold {
+        background: linear-gradient(135deg, #d4af37 0%, #c9a22e 100%);
+        border: none;
+        color: #000;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+
+    .btn-gold:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+        color: #000;
+    }
+
+    .social-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: rgba(212, 175, 55, 0.1);
+        color: #d4af37;
+        transition: all 0.3s ease;
+        text-decoration: none;
+    }
+
+    .social-icon:hover {
+        background: #d4af37;
+        color: #000;
+        transform: translateY(-3px);
+    }
+
+    .hover-gold:hover {
+        color: #d4af37 !important;
+    }
+
+    .text-gold {
+        color: #d4af37;
+    }
+
+    @@media (max-width: 991px) {
+        .navbar-custom {
+            background: rgba(26, 26, 26, 0.95) !important;
+            backdrop-filter: blur(10px);
+        }
+    }
+</style>
+
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JS.InvokeVoidAsync("initNavbarScroll");
+        }
+    }
+
+    private async Task SetLanguageItalian()
+    {
+        await L.SetLanguageAsync("it");
+    }
+
+    private async Task SetLanguageEnglish()
+    {
+        await L.SetLanguageAsync("en");
+    }
+
+    private async Task SetLanguageGerman()
+    {
+        await L.SetLanguageAsync("de");
+    }
+}
